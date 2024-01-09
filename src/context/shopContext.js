@@ -1,12 +1,21 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 
 
 export const shopContext = createContext(null);
 
 export const ShopContextProvider = (props) => {
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState();
 
+  useEffect(()=>{
+    const data = localStorage.getItem('cart');
+    setCartItems(!!JSON.parse(data) ? JSON.parse(data): [])
+  },[])
+
+  useEffect(()=>{
+    if(cartItems!==undefined)
+      localStorage.setItem('cart',JSON.stringify(cartItems))
+  },[cartItems])
 
   const add = (itemId)=>{
     if(!cartItems?.find((i)=>i.id===itemId))
@@ -17,7 +26,7 @@ export const ShopContextProvider = (props) => {
           return {...i, count: i.count + 1}
         else return i;
       })) 
-      console.log(cartItems);
+
   }
 
   const remove = (itemId)=>{
