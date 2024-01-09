@@ -37,8 +37,12 @@ export const ShopContextProvider = (props) => {
     }))
 
   }
+  const reset = ()=>{
+    localStorage.removeItem('cart');
+    setCartItems([]);
+  }
 
-  const values = {cartItems, add, remove}
+  const values = {cartItems, add, remove, reset}
   return ( 
     <shopContext.Provider value={values}>{props.children}</shopContext.Provider>
    );

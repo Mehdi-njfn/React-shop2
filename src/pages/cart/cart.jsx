@@ -5,7 +5,7 @@ import PRODUCT  from "../../data/products";
 
 
 const Cart = () => {
-  const {cartItems} = useContext(shopContext);
+  const {cartItems, reset} = useContext(shopContext);
   
   return ( 
     <>
@@ -18,6 +18,7 @@ const Cart = () => {
 
         }
       </div>
+        <button className="btn btn-warning" onClick={reset}>reset cart</button>
     </>
 
    );
