@@ -8,6 +8,7 @@ import { ShopContextProvider } from './context/shopContext'
 import Well from './component/wellcomemsg';
 import Register from './pages/auth/register';
 import Login from './pages/auth/login';
+import Protect from './component/protect';
 function App() {
   return (
     <div className="App">
@@ -17,7 +18,7 @@ function App() {
           <Well />
           <Routes>
             <Route path='/' element={<Shop />}/>
-            <Route path='/cart' element={<Cart />}/>
+            <Route path='/cart' element={<Protect component={<Cart />} />}/>
             <Route path='/register' element={<Register />}/>
             <Route path='/login' element={<Login />}/>
           </Routes>
