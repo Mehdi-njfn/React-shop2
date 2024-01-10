@@ -2,7 +2,6 @@ import { useContext, useState } from "react";
 import { shopContext } from "../../context/shopContext";
 import Product from "../shop/product";
 import PRODUCT  from "../../data/products";
-import Buy from "./buy";
 
 
 const Cart = () => {
