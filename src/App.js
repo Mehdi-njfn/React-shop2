@@ -6,6 +6,7 @@ import Cart from './pages/cart/cart';
 import Nav  from './component/nav';
 import { ShopContextProvider } from './context/shopContext'
 import Well from './component/wellcomemsg';
+import Register from './pages/auth/register';
 function App() {
   return (
     <div className="App">
@@ -16,6 +17,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Shop />}/>
             <Route path='/cart' element={<Cart />}/>
+            <Route path='/register' element={<Register />}/>
           </Routes>
         </ShopContextProvider>
       </Router>
