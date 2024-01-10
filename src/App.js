@@ -9,6 +9,7 @@ import Well from './component/wellcomemsg';
 import Register from './pages/auth/register';
 import Login from './pages/auth/login';
 import Protect from './component/protect';
+import Dashboard from './pages/dashboard';
 function App() {
   return (
     <div className="App">
@@ -19,6 +20,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Shop />}/>
             <Route path='/cart' element={<Protect component={<Cart />} />}/>
+            <Route path='/dashboard' element={<Dashboard />}/>
             <Route path='/register' element={<Register />}/>
             <Route path='/login' element={<Login />}/>
           </Routes>
