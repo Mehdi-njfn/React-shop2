@@ -46,7 +46,7 @@ class Register extends Component {
         //window.location='/dashboard'
       } catch (error) {
         this.setState({sending: false});
-        this.setState({errors:['user existed or email or password incorrect.']})
+        this.setState({errors:['user existed or email and password incorrect.']})
         
       }
     }
