@@ -6,7 +6,15 @@ export const shopContext = createContext(null);
 
 export const ShopContextProvider = (props) => {
   const [cartItems, setCartItems] = useState();
+  const [isAuth, setIsAuth] = useState();
 
+  useEffect(()=>{
+    if(localStorage.getItem('token')){
+      setIsAuth(true)}
+    else setIsAuth(false);
+    console.log(isAuth);
+  })
+  
   useEffect(()=>{
     const data = localStorage.getItem('cart');
     setCartItems(!!JSON.parse(data) ? JSON.parse(data): [])
@@ -42,7 +50,7 @@ export const ShopContextProvider = (props) => {
     setCartItems([]);
   }
 
-  const values = {cartItems, add, remove, reset}
+  const values = {cartItems, add, remove, reset, isAuth}
   return ( 
     <shopContext.Provider value={values}>{props.children}</shopContext.Provider>
    );

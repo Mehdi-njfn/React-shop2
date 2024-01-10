@@ -43,8 +43,9 @@ class Login extends Component {
         this.setState({sending:true});
         const response = await axios.post('https://reqres.in/api/login', result);
         this.setState({sending: false});
-        localStorage.setItem('token', response.data.token);
-        //window.location='/dashboard'
+        console.log('logined');
+        localStorage.setItem('token', response.data.token)
+        window.location="/dashboard";
       } catch (error) {
         this.setState({sending: false});
         this.setState({errors:['user existed or email and password incorrect.']})
