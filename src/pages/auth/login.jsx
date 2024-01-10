@@ -2,6 +2,7 @@ import { Component } from "react";
 import Input from '../../component/input';
 import * as yup from 'yup';
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 
 class Login extends Component {
@@ -74,6 +75,7 @@ class Login extends Component {
           <Input name={'password'} lable={'Password'} value={password} id={'password'} onChange={this.handleChange} />
         </div>
         <button disabled={this.state.sending} className="btn btn-success btn-lg">Submit</button>
+        <Link className="m-3 " to='/register'>Register</Link>
       </form>
     );
   }
