@@ -19,7 +19,7 @@ function App() {
           <Well />
           <Routes>
             <Route path='/' element={<Shop />}/>
-            <Route path='/cart' element={<Protect component={<Cart />} />}/>
+            <Route path='/cart' element={<Cart />} />
             <Route path='/dashboard' element={<Dashboard />}/>
             <Route path='/register' element={<Register />}/>
             <Route path='/login' element={<Login />}/>

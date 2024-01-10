@@ -45,7 +45,8 @@ class Login extends Component {
         this.setState({sending: false});
         console.log('logined');
         localStorage.setItem('token', response.data.token)
-        window.location="/dashboard";
+        // window.location="/dashboard";
+        window.location="/cart";
       } catch (error) {
         this.setState({sending: false});
         this.setState({errors:['user existed or email and password incorrect.']})
