@@ -1,4 +1,4 @@
-
+this project is v2 of react shop 1 with register and login pages for users 
 first running :
 
 1: npm init -y
