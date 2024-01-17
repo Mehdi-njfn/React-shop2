@@ -6,10 +6,12 @@ first running :
 2: npm install 
 3: npm start
 
-
-
-
-
+for login should use fake data of reqres.in for example:
+           { "email": "michael.lawson@reqres.in",
+            "first_name": "Michael",
+            "last_name": "Lawson",
+            "password":12345678
+        }
 
 
 # Getting Started with Create React App
